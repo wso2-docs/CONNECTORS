@@ -1,0 +1,39 @@
+<SendItem>
+  <RequestServerVersion>Exchange2013_SP1</RequestServerVersion>
+  <MailboxCulture>en-us</MailboxCulture>
+  <SmtpAddress>alfred@contoso.com</SmtpAddress>
+  <SaveItemToFolder>true</SaveItemToFolder>
+  <ItemId>
+    <Id>abcd...</Id>
+    <ChangeKey>defg...</ChangeKey>
+  </ItemId>
+  <OccurrenceItemId>
+    <RecurringMasterId>axdfr..</RecurringMasterId>
+    <ChangeKey>sfdasadad+dfwqq...</ChangeKey>
+    <InstanceIndex>1</InstanceIndex>
+  </OccurrenceItemId>
+  <RecurringMasterItemId>
+    <OccurrenceId>awfdsru...</OccurrenceId>
+    <ChangeKey>dffs....</ChangeKey>
+  </RecurringMasterItemId>
+  <RecurringMasterItemIdRanges>
+    <Id>eee...</Id>
+    <ChangeKey>bbb...</ChangeKey>
+    <Ranges>
+      <Range Start="0" End="10" Count="1" CompareOriginalStartTime="CompareOriginalStartTime"/>
+    </Ranges>
+  </RecurringMasterItemIdRanges>
+  <FolderId>
+    <Id>Id</Id>
+    <ChangeKey>ChangeKey</ChangeKey>
+  </FolderId>
+  <DistinguishedFolderId Id="?" ChangeKey="?">
+    <Mailbox>
+      <Name>Name</Name>
+      <EmailAddress>alfredo@constaco.com</EmailAddress>
+      <ItemId Id="abc..." ChangeKey="def..."/>
+      <OriginalDisplayName>Alfredo</OriginalDisplayName>
+    </Mailbox>
+  </DistinguishedFolderId>
+  <AddressListId>cdeft....</AddressListId>
+</SendItem>

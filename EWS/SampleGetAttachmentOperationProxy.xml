@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="getAttachment"
+       transports="http https"
+       startOnLoad="true">
+   <description/>
+   <target>
+      <inSequence>
+        <property name="uri.var.timeZoneDefinition"
+                   expression="//TimeZoneDefinition"
+                   scope="default"
+                   type="STRING"/>
+        <property name="uri.var.periods"
+                           expression="//Periods"
+                           scope="default"
+                           type="STRING"/>
+        <property name="uri.var.transitionsGroups"
+                           expression="//TransitionsGroups"
+                           scope="default"
+                           type="STRING"/>
+        <property name="uri.var.transitions"
+                           expression="//Transitions"
+                           scope="default"
+                           type="STRING"/>
+        <property name="uri.var.requestServerVersion"
+                           expression="//RequestServerVersion/text()"
+                           scope="default"
+                           type="STRING"/>
+        <property name="uri.var.mailboxCulture"
+                           expression="//MailboxCulture/text()"
+                           scope="default"
+                           type="STRING"/>
+        <property name="uri.var.smtpAddress"
+                           expression="//SmtpAddress/text()"
+                           scope="default"
+                           type="STRING"/>
+        <property name="uri.var.includeMimeContent"
+                           expression="//IncludeMimeContent/text()"
+                           scope="default"
+                           type="STRING"/>
+        <property name="uri.var.bodyType"
+                           expression="//BodyType/text()"
+                           scope="default"
+                           type="STRING"/>
+        <property name="uri.var.filterHtmlContent"
+                           expression="//FilterHtmlContent/text()"
+                           scope="default"
+                           type="STRING"/>
+        <property name="uri.var.additionalProperties"
+                           expression="//AdditionalProperties"
+                           scope="default"
+                           type="STRING"/>
+        <property name="uri.var.attachmentId"
+                           expression="//AttachmentId/text()"
+                           scope="default"
+                           type="STRING"/>
+         <ews.config>
+            <endpointUrl></endpointUrl>
+            <username></username>
+            <password></password>
+         </ews.config>
+         <ews.getAttachment>
+            <timeZoneDefinition>{$ctx:uri.var.timeZoneDefinition}</timeZoneDefinition>
+            <periods>{$ctx:uri.var.periods}</periods>
+            <transitionsGroups>{$ctx:uri.var.transitionsGroups}</transitionsGroups>
+            <transitions>{$ctx:uri.var.transitions}</transitions>
+            <requestServerVersion>{$ctx:uri.var.requestServerVersion}</requestServerVersion>
+            <mailboxCulture>{$ctx:uri.var.mailboxCulture}</mailboxCulture>
+            <smtpAddress>{$ctx:uri.var.smtpAddress}</smtpAddress>
+            <includeMimeContent>{$ctx:uri.var.includeMimeContent}</includeMimeContent>
+            <bodyType>{$ctx:uri.var.bodyType}</bodyType>
+            <filterHtmlContent>{$ctx:uri.var.filterHtmlContent}</filterHtmlContent>
+            <additionalProperties>{$ctx:uri.var.additionalProperties}</additionalProperties>
+            <attachmentId>{$ctx:uri.var.attachmentId}</attachmentId>
+         </ews.getAttachment>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <send/>
+      </outSequence>
+      <faultSequence>
+         <send/>
+      </faultSequence>
+   </target>
+</proxy>

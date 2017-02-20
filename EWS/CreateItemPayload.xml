@@ -1,0 +1,221 @@
+<CreateMessage>
+  <TimeZoneDefinition>
+    <Id>Eastern Standard Time</Id>
+    <Name>(UTC-05:00) Eastern Time (US &amp; Canada)</Name>
+  </TimeZoneDefinition>
+  <Periods>
+    <Period Bias="PT4H" Name="Daylight" Id="trule:Microsoft/Registry/Eastern Standard Time/2007-Daylight"/>
+  </Periods>
+  <TransitionsGroups>
+    <TransitionsGroup Id="0">
+      <Transition>
+        <To Kind="Group">0</To>
+      </Transition>
+    </TransitionsGroup>
+  </TransitionsGroups>
+  <Transitions>
+    <Transition>
+      <To Kind="Group">0</To>
+    </Transition>
+  </Transitions>
+  <RequestServerVersion>Exchange2013_SP1</RequestServerVersion>
+  <MailboxCulture>en-us</MailboxCulture>
+  <SmtpAddress>alfred@contoso.com</SmtpAddress>
+  <MessageDisposition>SaveOnly</MessageDisposition>
+  <FolderId>
+    <Id>ID</Id>
+    <ChangeKey>ChangeKey</ChangeKey>
+  </FolderId>
+  <DistinguishedFolderId Id="?" ChangeKey="?">
+    <Mailbox>
+      <Name>Name</Name>
+      <EmailAddress>EmailAddress</EmailAddress>
+      <RoutingType>RoutingType</RoutingType>
+      <MailboxType>MailboxType</MailboxType>
+      <ItemId Id="Id" ChangeKey="ChangeKey"/>
+      <OriginalDisplayName>OriginalDisplayName</OriginalDisplayName>
+    </Mailbox>
+  </DistinguishedFolderId>
+  <AddressListId>AddressListId</AddressListId>
+  <Message>
+    <MimeContent>
+      <CharacterSet>UTF-8</CharacterSet>
+      <Content> iVBORw0KGgoAAAANSUhEUgAAAUAAAADaCAYAAADXGps7AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+AAALewAAC3sBSRnwgAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAALnSURB...QCDLAIEsAwSyDBDIMkAgywCBLAMEsgwQyDJAIMsAgSwDBLIMEMgyQCDLAIEsAwSyDBDIMkAg6wK+
+4gU280YtuwAAAABJRU5ErkJggg==089e0149bb0ea4e55c051712afb5
+</Content>
+    </MimeContent>
+    <ItemId>
+      <Id>abcd...</Id>
+      <ChangeKey>cde...</ChangeKey>
+    </ItemId>
+    <ParentFolderId>
+      <Id>abxd...</Id>
+      <ChangeKey>defs...</ChangeKey>
+    </ParentFolderId>
+    <ItemClass>IPM</ItemClass>
+    <Subject>exchangeService-connector</Subject>
+    <Sensitivity>Confidential</Sensitivity>
+    <Body>
+      <BodyType>Text</BodyType>
+      <Content>Priority - Update specification</Content>
+      <IsTruncated>false</IsTruncated>
+    </Body>
+    <Attachments>
+      <FileAttachment>
+        <Name>abc</Name>
+        <ContentType>application/octet-stream</ContentType>
+        <Size>10</Size>
+        <IsInline>true</IsInline>
+        <IsContactPhoto>false</IsContactPhoto>
+        <Content>cid:243012833678</Content>
+      </FileAttachment>
+    </Attachments>
+    <DateTimeReceived>2017/03/01</DateTimeReceived>
+    <Size>100</Size>
+    <Categories>
+      <String>folder</String>
+    </Categories>
+    <Importance>High</Importance>
+    <InReplyTo>abcde...</InReplyTo>
+    <IsSubmitted>true</IsSubmitted>
+    <IsDraft>true</IsDraft>
+    <IsFromMe>true</IsFromMe>
+    <IsResend>false</IsResend>
+    <IsUnmodified>false</IsUnmodified>
+    <InternetMessageHeaders>
+      <InternetMessageHeader HeaderName="Received">from:abc@constaco.com</InternetMessageHeader>
+    </InternetMessageHeaders>
+    <DateTimeSent>2017/03/01,12.10</DateTimeSent>
+    <DateTimeCreated>2017/02/28,12.10</DateTimeCreated>
+    <ResponseObjects>
+      <ForwardItem>
+        <Subject>[fwd]--Ews connector-excange</Subject>
+      </ForwardItem>
+    </ResponseObjects>
+    <ReminderDueBy>2017/02/28</ReminderDueBy>
+    <ReminderIsSet>true</ReminderIsSet>
+    <ReminderNextTime>2017/02/28 12:11</ReminderNextTime>
+    <ReminderMinutesBeforeStart>5</ReminderMinutesBeforeStart>
+    <DisplayCc>false</DisplayCc>
+    <DisplayTo>true</DisplayTo>
+    <HasAttachments>true</HasAttachments>
+    <ExtendedProperty>
+      <ExtendedFieldURI DistinguishedPropertySetId="abcd.." PropertySetId="" PropertyTag="?" PropertyName="?" PropertyId="?" PropertyType="?"/>
+      <Value>?</Value>
+    </ExtendedProperty>
+    <Culture>en-us</Culture>
+    <EffectiveRights>
+      <CreateAssociated>false</CreateAssociated>
+      <CreateContents>false</CreateContents>
+      <CreateHierarchy>false</CreateHierarchy>
+      <Delete>false</Delete>
+      <Modify>fale</Modify>
+      <Read>flase</Read>
+    </EffectiveRights>
+    <LastModifiedName>abc</LastModifiedName>
+    <LastModifiedTime>12:10</LastModifiedTime>
+    <IsAssociated>false</IsAssociated>
+    <WebClientReadFormQueryString>?ae=Item&amp;a=Open</WebClientReadFormQueryString>
+    <WebClientEditFormQueryString>?ae=Item&amp;a=Open</WebClientEditFormQueryString>
+    <ConversationId>
+      <Id>+NTh0F5Eg5YDwpJsXPE=</Id>
+      <ChangeKey>NTh0F5Eg5YDwpJsXPE=</ChangeKey>
+    </ConversationId>
+    <UniqueBody>
+      <BodyType>Text</BodyType>
+      <IsTruncated>false</IsTruncated>
+      <Content>hello</Content>
+    </UniqueBody>
+    <Flag>
+      <FlagStatus>Flagged</FlagStatus>
+    </Flag>
+    <StoreEntryId>cid:586481372001</StoreEntryId>
+    <InstanceKey>cid:764006668833</InstanceKey>
+    <NormalizedBody>
+      <BodyType>Text</BodyType>
+      <IsTruncated>false</IsTruncated>
+      <Content>hello</Content>
+    </NormalizedBody>
+    <EntityExtractionResult>
+      <Addresses>
+        <AddressEntity>
+          <Address>789 International Blvd, St Paul MN 55104</Address>
+        </AddressEntity>
+      </Addresses>
+    </EntityExtractionResult>
+    <PolicyTag>
+      <IsExplicit>true</IsExplicit>
+      <Content>policy1</Content>
+    </PolicyTag>
+    <ArchiveTag>
+      <IsExplicit>true</IsExplicit>
+      <Content>archive1</Content>
+    </ArchiveTag>
+    <RetentionDate>2017/03/10</RetentionDate>
+    <Preview>hello..</Preview>
+    <RightsManagementLicenseData>
+      <IsOwner>true</IsOwner>
+    </RightsManagementLicenseData>
+    <BlockStatus>false</BlockStatus>
+    <HasBlockedImages>false</HasBlockedImages>
+    <TextBody>
+      <BodyType>Text</BodyType>
+      <IsTruncated>false</IsTruncated>
+      <Content>hello..</Content>
+    </TextBody>
+    <IconIndex>MailRead</IconIndex>
+    <Sender>
+      <Mailbox>
+        <EmailAddress>abc@constaco.com</EmailAddress>
+      </Mailbox>
+    </Sender>
+    <ToRecipients>
+      <Mailbox>
+        <EmailAddress>cde@constaco.com</EmailAddress>
+      </Mailbox>
+    </ToRecipients>
+    <CcRecipients>
+      <Mailbox>
+        <EmailAddress>def@constaco.com</EmailAddress>
+      </Mailbox>
+    </CcRecipients>
+    <BccRecipients>
+      <Mailbox>
+        <EmailAddress>c@constaco.com</EmailAddress>
+      </Mailbox>
+    </BccRecipients>
+    <IsReadReceiptRequested>true</IsReadReceiptRequested>
+    <IsDeliveryReceiptRequested>true</IsDeliveryReceiptRequested>
+    <ConversationIndex>cid:594714737722</ConversationIndex>
+    <ConversationTopic>ews-connector-documentation</ConversationTopic>
+    <From>
+      <Mailbox>
+        <EmailAddress>aa@constaco.com</EmailAddress>
+      </Mailbox>
+    </From>
+    <InternetMessageId>&lt;994051d7c1a346efbfce8dec2cbad509
+                    @SN2SR01MB006.com&gt;</InternetMessageId>
+    <IsRead>false</IsRead>
+    <IsResponseRequested>false</IsResponseRequested>
+    <References>?</References>
+    <ReplyTo>
+      <Mailbox>
+        <EmailAddress>abc@constaco.com</EmailAddress>
+      </Mailbox>
+    </ReplyTo>
+    <ReceivedBy>
+      <Mailbox>
+        <EmailAddress>a@constaco.com</EmailAddress>
+      </Mailbox>
+    </ReceivedBy>
+    <ReceivedRepresenting>
+      <Mailbox>
+        <EmailAddress>abcd@constaco.com</EmailAddress>
+      </Mailbox>
+    </ReceivedRepresenting>
+    <ReminderMessageData>
+      <ReminderText>hi this is reminder</ReminderText>
+    </ReminderMessageData>
+  </Message>
+</CreateMessage>
