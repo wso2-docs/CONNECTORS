@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="sendItem"
+       transports="http https"
+       startOnLoad="true">
+   <description/>
+   <target>
+      <inSequence>
+          <property name="uri.var.requestServerVersion"
+                             expression="//RequestServerVersion/text()"
+                             scope="default"
+                             type="STRING"/>
+          <property name="uri.var.mailboxCulture"
+                             expression="//MailboxCulture/text()"
+                             scope="default"
+                             type="STRING"/>
+          <property name="uri.var.smtpAddress"
+                             expression="//SmtpAddress/text()"
+                             scope="default"
+                             type="STRING"/>
+          <property name="uri.var.saveItemToFolder"
+                             expression="//SaveItemToFolder/text()"
+                             scope="default"
+                             type="STRING"/>
+          <property name="uri.var.itemId"
+                             expression="//ItemId"
+                             scope="default"
+                             type="STRING"/>
+          <property name="uri.var.occurrenceItemId"
+                             expression="//OccurrenceItemId"
+                             scope="default"
+                             type="STRING"/>
+          <property name="uri.var.recurringMasterItemId"
+                             expression="//RecurringMasterItemId"
+                             scope="default"
+                             type="STRING"/>
+          <property name="uri.var.recurringMasterItemIdRanges"
+                             expression="//RecurringMasterItemIdRanges"
+                             scope="default"
+                             type="STRING"/>
+          <property name="uri.var.folderId"
+                             expression="//FolderId"
+                             scope="default"
+                             type="STRING"/>
+          <property name="uri.var.distinguishedFolderId"
+                             expression="//DistinguishedFolderId"
+                             scope="default"
+                             type="STRING"/>
+          <property name="uri.var.addressListId"
+                             expression="//AddressListId/text()"
+                             scope="default"
+                             type="STRING"/>
+         <ews.config>
+            <endpointUrl></endpointUrl>
+            <username></username>
+            <password></password>
+         </ews.config>
+         <ews.sendItem>
+            <requestServerVersion>{$ctx:uri.var.requestServerVersion}</requestServerVersion>
+            <mailboxCulture>{$ctx:uri.var.mailboxCulture}</mailboxCulture>
+            <smtpAddress>{$ctx:uri.var.smtpAddress}</smtpAddress>
+            <saveItemToFolder>{$ctx:uri.var.saveItemToFolder}</saveItemToFolder>
+            <itemId>{$ctx:uri.var.itemId}</itemId>
+            <occurrenceItemId>{$ctx:uri.var.occurrenceItemId}</occurrenceItemId>
+            <recurringMasterItemId>{$ctx:uri.var.recurringMasterItemId}</recurringMasterItemId>
+            <recurringMasterItemIdRanges>{$ctx:uri.var.recurringMasterItemIdRanges}</recurringMasterItemIdRanges>
+            <folderId>{$ctx:uri.var.folderId}</folderId>
+            <distinguishedFolderId>{$ctx:uri.var.distinguishedFolderId}</distinguishedFolderId>
+            <addressListId>{$ctx:uri.var.addressListId}</addressListId>
+         </ews.sendItem>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <send/>
+      </outSequence>
+      <faultSequence>
+         <send/>
+      </faultSequence>
+   </target>
+</proxy>

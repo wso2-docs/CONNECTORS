@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="getItemOperation"
+       transports="http https"
+       startOnLoad="true">
+   <description/>
+   <target>
+      <inSequence>
+            <property name="uri.var.userRoles"
+                               expression="//UserRoles"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.applicationRoles"
+                               expression="//ApplicationRoles"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.timeZoneDefinition"
+                               expression="//TimeZoneDefinition"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.periods"
+                               expression="//Periods"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.transitionsGroups"
+                               expression="//TransitionsGroups"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.transitions"
+                               expression="//Transitions"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.requestServerVersion"
+                               expression="//RequestServerVersion/text()"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.mailboxCulture"
+                               expression="//MailboxCulture/text()"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.smtpAddress"
+                               expression="//SmtpAddress/text()"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.baseShape"
+                               expression="//BaseShape/text()"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.includeMimeContent"
+                               expression="//IncludeMimeContent/text()"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.bodyType"
+                               expression="//BodyType/text()"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.uniqueBodyType"
+                               expression="//UniqueBodyType/text()"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.normalizedBodyType"
+                               expression="//NormalizedBodyType/text()"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.filterHtmlContent"
+                               expression="//FilterHtmlContent/text()"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.convertHtmlCodePageToUTF8"
+                               expression="//ConvertHtmlCodePageToUTF8/text()"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.inlineImageUrlTemplate"
+                               expression="//InlineImageUrlTemplate/text()"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.blockExternalImages"
+                               expression="//BlockExternalImages/text()"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.addBlankTargetToLinks"
+                               expression="//AddBlankTargetToLinks/text()"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.maximumBodySize"
+                               expression="//MaximumBodySize/text()"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.additionalProperties"
+                               expression="//AdditionalProperties"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.itemId"
+                               expression="//ItemId"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.occurrenceItemId"
+                               expression="//OccurrenceItemId"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.recurringMasterItemId"
+                               expression="//RecurringMasterItemId"
+                               scope="default"
+                               type="STRING"/>
+            <property name="uri.var.recurringMasterItemIdRanges"
+                               expression="//RecurringMasterItemIdRanges"
+                               scope="default"
+                               type="STRING"/>
+         <ews.config>
+            <endpointUrl></endpointUrl>
+            <username></username>
+            <password></password>
+         </ews.config>
+         <ews.getItem>
+          <userRoles>{$ctx:uri.var.userRoles}</userRoles>
+          <applicationRoles>{$ctx:uri.var.applicationRoles}</applicationRoles>
+          <timeZoneDefinition>{$ctx:uri.var.timeZoneDefinition}</timeZoneDefinition>
+          <periods>{$ctx:uri.var.periods}</periods>
+          <transitionsGroups>{$ctx:uri.var.transitionsGroups}</transitionsGroups>
+          <transitions>{$ctx:uri.var.transitions}</transitions>
+          <requestServerVersion>{$ctx:uri.var.requestServerVersion}</requestServerVersion>
+          <mailboxCulture>{$ctx:uri.var.mailboxCulture}</mailboxCulture>
+          <smtpAddress>{$ctx:uri.var.smtpAddress}</smtpAddress>
+          <baseShape>{$ctx:uri.var.baseShape}</baseShape>
+          <includeMimeContent>{$ctx:uri.var.includeMimeContent}</includeMimeContent>
+          <bodyType>{$ctx:uri.var.bodyType}</bodyType>
+          <uniqueBodyType>{$ctx:uri.var.uniqueBodyType}</uniqueBodyType>
+          <normalizedBodyType>{$ctx:uri.var.normalizedBodyType}</normalizedBodyType>
+          <filterHtmlContent>{$ctx:uri.var.filterHtmlContent}</filterHtmlContent>
+          <convertHtmlCodePageToUTF8>{$ctx:uri.var.convertHtmlCodePageToUTF8}</convertHtmlCodePageToUTF8>
+          <inlineImageUrlTemplate>{$ctx:uri.var.inlineImageUrlTemplate}</inlineImageUrlTemplate>
+          <blockExternalImages>{$ctx:uri.var.blockExternalImages}</blockExternalImages>
+          <addBlankTargetToLinks>{$ctx:uri.var.addBlankTargetToLinks}</addBlankTargetToLinks>
+          <maximumBodySize>{$ctx:uri.var.maximumBodySize}</maximumBodySize>
+          <additionalProperties>{$ctx:uri.var.additionalProperties}</additionalProperties>
+          <itemId>{$ctx:uri.var.itemId}</itemId>
+          <occurrenceItemId>{$ctx:uri.var.occurrenceItemId}</occurrenceItemId>
+          <recurringMasterItemId>{$ctx:uri.var.recurringMasterItemId}</recurringMasterItemId>
+          <recurringMasterItemIdRanges>{$ctx:uri.var.recurringMasterItemIdRanges}</recurringMasterItemIdRanges>
+         </ews.getItem>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <send/>
+      </outSequence>
+      <faultSequence>
+         <send/>
+      </faultSequence>
+   </target>
+</proxy>

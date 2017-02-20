@@ -1,0 +1,77 @@
+<FindItem>
+      <UserRoles>
+            <Role>userRole1</Role>
+            <Role>userRole2</Role>
+      </UserRoles>
+      <ApplicationRoles>
+            <Role>ApplicationRoles1</Role>
+            <Role>ApplicationRoles2</Role>
+      </ApplicationRoles>
+      <TimeZoneDefinition>
+            <Id>Eastern Standard Time</Id>
+            <Name>(UTC-05:00) Eastern Time (US &amp; Canada)</Name>
+      </TimeZoneDefinition>
+      <Periods>
+            <Period Bias="PT4H" Name="Daylight" Id="trule:Microsoft/Registry/Eastern Standard Time/2007-Daylight"/>
+      </Periods>
+      <TransitionsGroups>
+            <TransitionsGroup Id="0">
+                  <Transition>
+                        <To Kind="Group">0</To>
+                  </Transition>
+            </TransitionsGroup>
+      </TransitionsGroups>
+      <Transitions>
+            <Transition>
+                  <To Kind="Group">0</To>
+            </Transition>
+      </Transitions>
+      <RequestServerVersion>Exchange2013_SP1</RequestServerVersion>
+      <MailboxCulture>en-us</MailboxCulture>
+      <SmtpAddress>alfred@contoso.com</SmtpAddress>
+      <Traversal>Swallow</Traversal>
+      <BaseShape>IdOnly</BaseShape>
+      <IncludeMimeContent>true</IncludeMimeContent>
+      <BodyType>Text</BodyType>
+      <UniqueBodyType>Text</UniqueBodyType>
+      <NormalizedBodyType>Text</NormalizedBodyType>
+      <FilterHtmlContent>true</FilterHtmlContent>
+      <ConvertHtmlCodePageToUTF8>false</ConvertHtmlCodePageToUTF8>
+      <InlineImageUrlTemplate></InlineImageUrlTemplate>
+      <BlockExternalImages>true</BlockExternalImages>
+      <AddBlankTargetToLinks>true</AddBlankTargetToLinks>
+      <MaximumBodySize>415</MaximumBodySize>
+      <AdditionalProperties>
+            <FieldURI FieldURI="message:IsRead"/>
+            <FieldURI FieldURI="item:Subject"/>
+      </AdditionalProperties>
+         <IndexedPageItemView MaxEntriesReturned="10" Offset="1" BasePoint="Beginning"/>
+         <FractionalPageItemView MaxEntriesReturned="1" Numerator="1" Denominator="3"/>
+         <SeekToConditionPageItemView MaxEntriesReturned="3" BasePoint="Beginning">
+            <Condition>
+               <SearchExpression/>
+            </Condition>
+         </SeekToConditionPageItemView>
+         <CalendarView MaxEntriesReturned="3" StartDate="2017-02-10" EndDate="2017-02-16"/>
+         <ContactsView MaxEntriesReturned="5" InitialName="Abc" FinalName="Bcd"/>
+         <GroupBy Order="Ascending">
+            <FieldURI FieldURI="item:Subject"/>
+         </GroupBy>
+         <DistinguishedGroupBy Order="Ascending">
+            <StandardGroupBy>item:DateTimeReceived (maximum)</StandardGroupBy>
+         </DistinguishedGroupBy>
+         <Restriction>
+            <SearchExpression/>
+         </Restriction>
+         <SortOrder>
+            <FieldOrder Order="Ascending">
+               <Path/>
+            </FieldOrder>
+         </SortOrder>
+         <ParentFolderIds>
+            <FolderId Id="abcd.." ChangeKey="abc..."/>
+         </ParentFolderIds>
+         <QueryString>
+            <Body>hasattachment:true</Body>
+         </QueryString>
+</FindItem>

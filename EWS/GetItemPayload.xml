@@ -1,0 +1,70 @@
+<GetItem>
+      <UserRoles>
+            <Role>userRole1</Role>
+            <Role>userRole2</Role>
+      </UserRoles>
+      <ApplicationRoles>
+            <Role>ApplicationRoles1</Role>
+            <Role>ApplicationRoles2</Role>
+      </ApplicationRoles>
+      <TimeZoneDefinition>
+            <Id>Eastern Standard Time</Id>
+            <Name>(UTC-05:00) Eastern Time (US &amp; Canada)</Name>
+      </TimeZoneDefinition>
+      <Periods>
+            <Period Bias="PT4H" Name="Daylight" Id="trule:Microsoft/Registry/Eastern Standard Time/2007-Daylight"/>
+      </Periods>
+      <TransitionsGroups>
+            <TransitionsGroup Id="0">
+                  <Transition>
+                        <To Kind="Group">0</To>
+                  </Transition>
+            </TransitionsGroup>
+      </TransitionsGroups>
+      <Transitions>
+            <Transition>
+                  <To Kind="Group">0</To>
+            </Transition>
+      </Transitions>
+      <RequestServerVersion>Exchange2013_SP1</RequestServerVersion>
+      <MailboxCulture>en-us</MailboxCulture>
+      <SmtpAddress>alfred@contoso.com</SmtpAddress>
+      <BaseShape>IdOnly</BaseShape>
+      <IncludeMimeContent>true</IncludeMimeContent>
+      <BodyType>Text</BodyType>
+      <UniqueBodyType>Text</UniqueBodyType>
+      <NormalizedBodyType>Text</NormalizedBodyType>
+      <FilterHtmlContent>true</FilterHtmlContent>
+      <ConvertHtmlCodePageToUTF8>false</ConvertHtmlCodePageToUTF8>
+      <InlineImageUrlTemplate></InlineImageUrlTemplate>
+      <BlockExternalImages>true</BlockExternalImages>
+      <AddBlankTargetToLinks>true</AddBlankTargetToLinks>
+      <MaximumBodySize>415</MaximumBodySize>
+      <AdditionalProperties>
+            <FieldURI FieldURI="message:IsRead"/>
+            <FieldURI FieldURI="item:Subject"/>
+      </AdditionalProperties>
+      <ItemId>
+            <Id>abcd....</Id>
+            <ChangeKey>defghjy....</ChangeKey>
+      </ItemId>
+      <OccurrenceItemId>
+            <RecurringMasterId>aaa...</RecurringMasterId>
+            <ChangeKey>aa...</ChangeKey>
+            <InstanceIndex>ffr...</InstanceIndex>
+      </OccurrenceItemId>
+      <RecurringMasterItemId>
+            <OccurrenceId>fgfgf..</OccurrenceId>
+            <ChangeKey>dsdsd..</ChangeKey>
+      </RecurringMasterItemId>
+      <RecurringMasterItemIdRanges>
+            <Id>dads..</Id>
+            <ChangeKey>sadada...</ChangeKey>
+            <Ranges>
+                  <Range Start="Start1" End="End" Count="Count" CompareOriginalStartTime="CompareOriginalStartTime"/>
+            </Ranges>
+            <Ranges>
+                  <Range Start="Start2" End="End" Count="Count" CompareOriginalStartTime="CompareOriginalStartTime"/>
+            </Ranges>
+      </RecurringMasterItemIdRanges>
+</GetItem>

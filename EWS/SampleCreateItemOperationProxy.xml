@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="createItemOperation"
+       transports="http https"
+       startOnLoad="true">
+   <description/>
+   <target>
+      <inSequence>
+         <property name="uri.var.timeZoneDefinition"
+                   expression="//TimeZoneDefinition"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.periods"
+                   expression="//Periods"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.transitionsGroups"
+                   expression="//TransitionsGroups"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.transitions"
+                   expression="//Transitions"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.requestServerVersion"
+                   expression="//RequestServerVersion/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.mailboxCulture"
+                   expression="//MailboxCulture/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.smtpAddress"
+                   expression="//SmtpAddress/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.messageDisposition"
+                   expression="//MessageDisposition/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.distinguishedFolderId"
+                   expression="//DistinguishedFolderId"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.addressListId"
+                   expression="//AddressListId"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.folderId"
+                   expression="//FolderId"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.mimeContent"
+                   expression="//MimeContent"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.itemId"
+                   expression="//Message/ItemId"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.parentFolderId"
+                   expression="//ParentFolderId"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.itemClass"
+                   expression="//ItemClass/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.subject"
+                   expression="//Subject/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.sensitivity"
+                   expression="//Sensitivity/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.body"
+                   expression="//Body"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.attachments"
+                   expression="//Attachments"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.dateTimeReceived"
+                   expression="//DateTimeReceived/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.size"
+                   expression="//Size/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.categories"
+                   expression="//Categories"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.importance"
+                   expression="//Importance/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.inReplyTo"
+                   expression="//InReplyTo/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.isSubmitted"
+                   expression="//IsSubmitted/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.isDraft"
+                   expression="//IsDraft/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.isFromMe"
+                   expression="//IsFromMe/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.isResend"
+                   expression="//IsResend/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.isUnmodified"
+                   expression="//IsUnmodified/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.internetMessageHeaders"
+                   expression="//InternetMessageHeaders"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.dateTimeSent"
+                   expression="//DateTimeSent/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.dateTimeCreated"
+                   expression="//DateTimeCreated/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.responseObjects"
+                   expression="//ResponseObjects"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.reminderDueBy"
+                   expression="//ReminderDueBy/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.reminderIsSet"
+                   expression="//ReminderIsSet/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.reminderNextTime"
+                   expression="//ReminderNextTime/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.reminderMinutesBeforeStart"
+                   expression="//ReminderMinutesBeforeStart/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.displayCc"
+                   expression="//DisplayCc/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.displayTo"
+                   expression="//DisplayTo/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.hasAttachments"
+                   expression="//HasAttachments/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.extendedProperty"
+                   expression="//ExtendedProperty"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.culture"
+                   expression="//Culture/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.effectiveRights"
+                   expression="//EffectiveRights"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.lastModifiedName"
+                   expression="//LastModifiedName/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.lastModifiedTime"
+                   expression="//LastModifiedTime/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.isAssociated"
+                   expression="//IsAssociated/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.webClientReadFormQueryString"
+                   expression="//WebClientReadFormQueryString/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.webClientEditFormQueryString"
+                   expression="//WebClientEditFormQueryString/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.conversationId"
+                   expression="//ConversationId"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.uniqueBody"
+                   expression="//UniqueBody"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.flag"
+                   expression="//Flag"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.storeEntryId"
+                   expression="//StoreEntryId/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.instanceKey"
+                   expression="//InstanceKey/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.normalizedBody"
+                   expression="//NormalizedBody"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.entityExtractionResult"
+                   expression="//EntityExtractionResult"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.policyTag"
+                   expression="//PolicyTag"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.archiveTag"
+                   expression="//ArchiveTag"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.retentionDate"
+                   expression="//RetentionDate/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.preview"
+                   expression="//Preview/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.rightsManagementLicenseData"
+                   expression="//RightsManagementLicenseData"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.blockStatus"
+                   expression="//BlockStatus/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.hasBlockedImages"
+                   expression="//HasBlockedImages/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.textBody"
+                   expression="//TextBody"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.iconIndex"
+                   expression="//IconIndex/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.sender"
+                   expression="//Sender"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.toRecipients"
+                   expression="//ToRecipients"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.ccRecipients"
+                   expression="//CcRecipients"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.bccRecipients"
+                   expression="//BccRecipients"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.isReadReceiptRequested"
+                   expression="//IsReadReceiptRequested/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.isDeliveryReceiptRequested"
+                   expression="//IsDeliveryReceiptRequested/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.conversationIndex"
+                   expression="//ConversationIndex/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.conversationTopic"
+                   expression="//ConversationTopic/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.from"
+                   expression="//From"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.internetMessageId"
+                   expression="//InternetMessageId/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.isRead"
+                   expression="//IsRead/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.isResponseRequested"
+                   expression="//IsResponseRequested/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.references"
+                   expression="//References/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.replyTo"
+                   expression="//ReplyTo"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.receivedBy"
+                   expression="//ReceivedBy"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.receivedRepresenting"
+                   expression="//ReceivedRepresenting"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.reminderMessageData"
+                   expression="//ReminderMessageData"
+                   scope="default"
+                   type="STRING"/>
+         <ews.config>
+            <endpointUrl></endpointUrl>
+            <username></username>
+            <password></password>
+         </ews.config>
+         <ews.createItem>
+            <timeZoneDefinition>{$ctx:uri.var.timeZoneDefinition}</timeZoneDefinition>
+            <periods>{$ctx:uri.var.periods}</periods>
+            <transitionsGroups>{$ctx:uri.var.transitionsGroups}</transitionsGroups>
+            <transitions>{$ctx:uri.var.transitions}</transitions>
+            <requestServerVersion>{$ctx:uri.var.requestServerVersion}</requestServerVersion>
+            <mailboxCulture>{$ctx:uri.var.mailboxCulture}</mailboxCulture>
+            <principalName>{$ctx:uri.var.principalName}</principalName>
+            <sid>{$ctx:uri.var.sid}</sid>
+            <primarySmtpAddress>{$ctx:uri.var.primarySmtpAddress}</primarySmtpAddress>
+            <smtpAddress>{$ctx:uri.var.smtpAddress}</smtpAddress>
+            <messageDisposition>{$ctx:uri.var.messageDisposition}</messageDisposition>
+            <folderId>{$ctx:uri.var.folderId}</folderId>
+            <distinguishedFolderId>{$ctx:uri.var.distinguishedFolderId}</distinguishedFolderId>
+            <addressListId>{$ctx:uri.var.addressListId}</addressListId>
+            <mimeContent>{$ctx:uri.var.mimeContent}</mimeContent>
+            <itemId>{$ctx:uri.var.itemId}</itemId>
+            <parentFolderId>{$ctx:uri.var.parentFolderId}</parentFolderId>
+            <itemClass>{$ctx:uri.var.itemClass}</itemClass>
+            <subject>{$ctx:uri.var.subject}</subject>
+            <sensitivity>{$ctx:uri.var.sensitivity}</sensitivity>
+            <body>{$ctx:uri.var.body}</body>
+            <attachments>{$ctx:uri.var.attachments}</attachments>
+            <dateTimeReceived>{$ctx:uri.var.dateTimeReceived}</dateTimeReceived>
+            <size>{$ctx:uri.var.size}</size>
+            <categories>{$ctx:uri.var.categories}</categories>
+            <importance>{$ctx:uri.var.importance}</importance>
+            <inReplyTo>{$ctx:uri.var.inReplyTo}</inReplyTo>
+            <isSubmitted>{$ctx:uri.var.isSubmitted}</isSubmitted>
+            <isDraft>{$ctx:uri.var.isDraft}</isDraft>
+            <isFromMe>{$ctx:uri.var.isFromMe}</isFromMe>
+            <isResend>{$ctx:uri.var.isResend}</isResend>
+            <isUnmodified>{$ctx:uri.var.isUnmodified}</isUnmodified>
+            <internetMessageHeaders>{$ctx:uri.var.internetMessageHeaders}</internetMessageHeaders>
+            <dateTimeSent>{$ctx:uri.var.dateTimeSent}</dateTimeSent>
+            <dateTimeCreated>{$ctx:uri.var.dateTimeCreated}</dateTimeCreated>
+            <responseObjects>{$ctx:uri.var.responseObjects}</responseObjects>
+            <reminderDueBy>{$ctx:uri.var.reminderDueBy}</reminderDueBy>
+            <reminderIsSet>{$ctx:uri.var.reminderIsSet}</reminderIsSet>
+            <reminderNextTime>{$ctx:uri.var.reminderNextTime}</reminderNextTime>
+            <reminderMinutesBeforeStart>{$ctx:uri.var.reminderMinutesBeforeStart}</reminderMinutesBeforeStart>
+            <displayCc>{$ctx:uri.var.displayCc}</displayCc>
+            <displayTo>{$ctx:uri.var.displayTo}</displayTo>
+            <hasAttachments>{$ctx:uri.var.hasAttachments}</hasAttachments>
+            <extendedProperty>{$ctx:uri.var.extendedProperty}</extendedProperty>
+            <culture>{$ctx:uri.var.culture}</culture>
+            <effectiveRights>{$ctx:uri.var.effectiveRights}</effectiveRights>
+            <lastModifiedName>{$ctx:uri.var.lastModifiedName}</lastModifiedName>
+            <lastModifiedTime>{$ctx:uri.var.lastModifiedTime}</lastModifiedTime>
+            <isAssociated>{$ctx:uri.var.isAssociated}</isAssociated>
+            <webClientReadFormQueryString>{$ctx:uri.var.webClientReadFormQueryString}</webClientReadFormQueryString>
+            <webClientEditFormQueryString>{$ctx:uri.var.webClientEditFormQueryString}</webClientEditFormQueryString>
+            <conversationId>{$ctx:uri.var.conversationId}</conversationId>
+            <uniqueBody>{$ctx:uri.var.uniqueBody}</uniqueBody>
+            <flag>{$ctx:uri.var.flag}</flag>
+            <storeEntryId>{$ctx:uri.var.storeEntryId}</storeEntryId>
+            <instanceKey>{$ctx:uri.var.instanceKey}</instanceKey>
+            <normalizedBody>{$ctx:uri.var.normalizedBody}</normalizedBody>
+            <entityExtractionResult>{$ctx:uri.var.entityExtractionResult}</entityExtractionResult>
+            <policyTag>{$ctx:uri.var.policyTag}</policyTag>
+            <archiveTag>{$ctx:uri.var.archiveTag}</archiveTag>
+            <retentionDate>{$ctx:uri.var.retentionDate}</retentionDate>
+            <preview>{$ctx:uri.var.preview}</preview>
+            <rightsManagementLicenseData>{$ctx:uri.var.rightsManagementLicenseData}</rightsManagementLicenseData>
+            <predictedActionReasons>{$ctx:uri.var.predictedActionReasons}</predictedActionReasons>
+            <isClutter>{$ctx:uri.var.isClutter}</isClutter>
+            <blockStatus>{$ctx:uri.var.blockStatus}</blockStatus>
+            <hasBlockedImages>{$ctx:uri.var.hasBlockedImages}</hasBlockedImages>
+            <textBody>{$ctx:uri.var.textBody}</textBody>
+            <iconIndex>{$ctx:uri.var.iconIndex}</iconIndex>
+            <sender>{$ctx:uri.var.sender}</sender>
+            <toRecipients>{$ctx:uri.var.toRecipients}</toRecipients>
+            <ccRecipients>{$ctx:uri.var.ccRecipients}</ccRecipients>
+            <bccRecipients>{$ctx:uri.var.bccRecipients}</bccRecipients>
+            <isReadReceiptRequested>{$ctx:uri.var.isReadReceiptRequested}</isReadReceiptRequested>
+            <isDeliveryReceiptRequested>{$ctx:uri.var.isDeliveryReceiptRequested}</isDeliveryReceiptRequested>
+            <conversationIndex>{$ctx:uri.var.conversationIndex}</conversationIndex>
+            <conversationTopic>{$ctx:uri.var.conversationTopic}</conversationTopic>
+            <from>{$ctx:uri.var.from}</from>
+            <internetMessageId>{$ctx:uri.var.internetMessageId}</internetMessageId>
+            <isRead>{$ctx:uri.var.isRead}</isRead>
+            <isResponseRequested>{$ctx:uri.var.isResponseRequested}</isResponseRequested>
+            <references>{$ctx:uri.var.references}</references>
+            <replyTo>{$ctx:uri.var.replyTo}</replyTo>
+            <receivedBy>{$ctx:uri.var.receivedBy}</receivedBy>
+            <receivedRepresenting>{$ctx:uri.var.receivedRepresenting}</receivedRepresenting>
+            <approvalRequestData>{$ctx:uri.var.approvalRequestData}</approvalRequestData>
+            <votingInformation>{$ctx:uri.var.votingInformation}</votingInformation>
+            <reminderMessageData>{$ctx:uri.var.reminderMessageData}</reminderMessageData>
+         </ews.createItem>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <send/>
+      </outSequence>
+      <faultSequence>
+         <send/>
+      </faultSequence>
+   </target>
+</proxy>
