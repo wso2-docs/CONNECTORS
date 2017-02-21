@@ -54,11 +54,11 @@
                            expression="//AttachmentId/text()"
                            scope="default"
                            type="STRING"/>
-         <ews.config>
+         <ews.init>
             <endpointUrl></endpointUrl>
             <username></username>
             <password></password>
-         </ews.config>
+         </ews.init>
          <ews.getAttachment>
             <timeZoneDefinition>{$ctx:uri.var.timeZoneDefinition}</timeZoneDefinition>
             <periods>{$ctx:uri.var.periods}</periods>
