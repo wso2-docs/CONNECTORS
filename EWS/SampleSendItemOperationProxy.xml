@@ -50,11 +50,11 @@
                              expression="//AddressListId/text()"
                              scope="default"
                              type="STRING"/>
-         <ews.config>
+         <ews.init>
             <endpointUrl></endpointUrl>
             <username></username>
             <password></password>
-         </ews.config>
+         </ews.init>
          <ews.sendItem>
             <requestServerVersion>{$ctx:uri.var.requestServerVersion}</requestServerVersion>
             <mailboxCulture>{$ctx:uri.var.mailboxCulture}</mailboxCulture>

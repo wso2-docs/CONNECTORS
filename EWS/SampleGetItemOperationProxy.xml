@@ -106,11 +106,11 @@
                                expression="//RecurringMasterItemIdRanges"
                                scope="default"
                                type="STRING"/>
-         <ews.config>
+         <ews.init>
             <endpointUrl></endpointUrl>
             <username></username>
             <password></password>
-         </ews.config>
+         </ews.init>
          <ews.getItem>
           <userRoles>{$ctx:uri.var.userRoles}</userRoles>
           <applicationRoles>{$ctx:uri.var.applicationRoles}</applicationRoles>
