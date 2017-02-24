@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   Copyright (c) 2017, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+
+   WSO2 Inc. licenses this file to you under the Apache License,
+   Version 2.0 (the "License"); you may not use this file except
+   in compliance with the License.
+   You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing,
+   software distributed under the License is distributed on an
+   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied. See the License for the
+   specific language governing permissions and limitations
+   under the License.
+-->
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="updateItemOperation"
+       transports="http https"
+       startOnLoad="true">
+   <description/>
+   <target>
+      <inSequence>
+         <property name="uri.var.requestServerVersion"
+                   expression="//RequestServerVersion/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.mailboxCulture"
+                   expression="//MailboxCulture/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.smtpAddress"
+                   expression="//SmtpAddress/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.conflictResolution"
+                   expression="//ConflictResolution/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.messageDisposition"
+                   expression="//MessageDisposition/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.sendMeetingInvitationsOrCancellations"
+                   expression="//SendMeetingInvitationsOrCancellations/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.suppressReadReceipts"
+                   expression="//SuppressReadReceipts/text()"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.distinguishedFolderId"
+                   expression="//DistinguishedFolderId"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.addressListId"
+                   expression="//AddressListId"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.folderId"
+                   expression="//FolderId"
+                   scope="default"
+                   type="STRING"/>
+         <property name="uri.var.itemChanges"
+                   expression="//ItemChanges"
+                   scope="default"
+                   type="STRING"/>
+         <ews.init>
+            <endpointUrl></endpointUrl>
+            <username></username>
+            <password></password>
+         </ews.init>
+         <ews.updateItem>
+            <requestServerVersion>{$ctx:uri.var.requestServerVersion}</requestServerVersion>
+            <mailboxCulture>{$ctx:uri.var.mailboxCulture}</mailboxCulture>
+            <smtpAddress>{$ctx:uri.var.smtpAddress}</smtpAddress>
+            <messageDisposition>{$ctx:uri.var.messageDisposition}</messageDisposition>
+            <folderId>{$ctx:uri.var.folderId}</folderId>
+            <distinguishedFolderId>{$ctx:uri.var.distinguishedFolderId}</distinguishedFolderId>
+            <addressListId>{$ctx:uri.var.addressListId}</addressListId>
+            <messageDisposition>{$ctx:uri.var.messageDisposition}</messageDisposition>
+            <conflictResolution>{$ctx:uri.var.conflictResolution}</conflictResolution>
+            <itemChanges>{$ctx:uri.var.itemChanges}</itemChanges>
+         </ews.updateItem>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <send/>
+      </outSequence>
+      <faultSequence>
+         <send/>
+      </faultSequence>
+   </target>
+</proxy>

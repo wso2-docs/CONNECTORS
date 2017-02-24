@@ -1,0 +1,29 @@
+<DeleteItem>
+  <RequestServerVersion>Exchange2013_SP1</RequestServerVersion>
+  <MailboxCulture>en-us</MailboxCulture>
+  <SmtpAddress>alfred@contoso.com</SmtpAddress>
+  <DeleteType></DeleteType>
+  <SendMeetingCancellations></SendMeetingCancellations>
+  <AffectedTaskOccurrences></AffectedTaskOccurrences>
+  <SuppressReadReceipts></SuppressReadReceipts>
+  <ItemId>
+    <Id>abcd....</Id>
+    <ChangeKey>defghjy....</ChangeKey>
+  </ItemId>
+  <OccurrenceItemId>
+    <RecurringMasterId>aaa...</RecurringMasterId>
+    <ChangeKey>aa...</ChangeKey>
+    <InstanceIndex>ffr...</InstanceIndex>
+  </OccurrenceItemId>
+  <RecurringMasterItemId>
+    <OccurrenceId>fgfgf..</OccurrenceId>
+    <ChangeKey>dsdsd..</ChangeKey>
+  </RecurringMasterItemId>
+  <RecurringMasterItemIdRanges>
+    <Id>dads..</Id>
+    <ChangeKey>sadada...</ChangeKey>
+      <Ranges>
+        <Range Start="Start1" End="End" Count="Count" CompareOriginalStartTime="CompareOriginalStartTime"/>
+      </Ranges>
+  </RecurringMasterItemIdRanges>
+</DeleteItem>

@@ -1,0 +1,35 @@
+<UpdateItem>
+  <RequestServerVersion>Exchange2013_SP1</RequestServerVersion>
+  <MailboxCulture>en-us</MailboxCulture>
+  <SmtpAddress>alfred@contoso.com</SmtpAddress>
+  <MessageDisposition>SaveOnly</MessageDisposition>
+  <FolderId>
+    <Id>abcd..</Id>
+    <ChangeKey>bvv..</ChangeKey>
+  </FolderId>
+  <DistinguishedFolderId Id="aaa.." ChangeKey="aadd..">
+    <Mailbox>
+      <Name>Name</Name>
+      <EmailAddress>EmailAddress</EmailAddress>
+      <RoutingType>RoutingType</RoutingType>
+      <MailboxType>MailboxType</MailboxType>
+      <ItemId Id="aa..." ChangeKey="fdd..."/>
+      <OriginalDisplayName>OriginalDisplayName</OriginalDisplayName>
+    </Mailbox>
+  </DistinguishedFolderId>
+  <AddressListId>AddressListId</AddressListId>
+      <ConflictResolution>AutoResolve</ConflictResolution>
+      <ItemChanges>
+        <ItemChange>
+          <ItemId Id="abc=" ChangeKey="AAAMKdoR"/>
+          <Updates>
+            <AppendToItemField>
+              <FieldURI FieldURI="item:Body"/>
+              <Message>
+                <Body BodyType="Text">Some additional text to append</Body>
+              </Message>
+            </AppendToItemField>
+          </Updates>
+        </ItemChange>
+      </ItemChanges>  
+</UpdateItem>
