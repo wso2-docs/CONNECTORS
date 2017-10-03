@@ -28,6 +28,7 @@
       </Transitions>
       <RequestServerVersion>Exchange2013_SP1</RequestServerVersion>
       <MailboxCulture>en-us</MailboxCulture>
+      <primarySmtpAddress>alfredService@contoso.com</primarySmtpAddress>
       <SmtpAddress>alfred@contoso.com</SmtpAddress>
       <Traversal>Swallow</Traversal>
       <BaseShape>IdOnly</BaseShape>
