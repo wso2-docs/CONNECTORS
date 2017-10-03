@@ -38,6 +38,10 @@
                            expression="//MailboxCulture/text()"
                            scope="default"
                            type="STRING"/>
+        <property name="uri.var.primarySmtpAddress"
+                           expression="//primarySmtpAddress/text()"
+                           scope="default"
+                           type="STRING"/>     
         <property name="uri.var.smtpAddress"
                            expression="//SmtpAddress/text()"
                            scope="default"
@@ -152,6 +156,7 @@
             <transitions>{$ctx:uri.var.transitions}</transitions>
             <requestServerVersion>{$ctx:uri.var.requestServerVersion}</requestServerVersion>
             <mailboxCulture>{$ctx:uri.var.mailboxCulture}</mailboxCulture>
+            <primarySmtpAddress>{$ctx:uri.var.primarySmtpAddress}</primarySmtpAddress>   
             <smtpAddress>{$ctx:uri.var.smtpAddress}</smtpAddress>
             <traversal>{$ctx:uri.var.traversal}</traversal>
             <baseShape>{$ctx:uri.var.baseShape}</baseShape>
