@@ -38,7 +38,7 @@ public class TestClient {
                 log.info("ISO8583 data : ");
                 String input = inFromUser.readLine(); // Read the command line input
                 input = input.toUpperCase();
-                outToServer.writeUTF(input + "\n");
+                outToServer.write(input.getBytes());
                 outToServer.flush();
                 String messageFromServer;
                 while ((messageFromServer = inFromServer.readLine()) != null) {

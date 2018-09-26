@@ -46,10 +46,14 @@ public class connectionHandler {
         try {
             if (serverSocket.isConnected()) {
                 log.info("There is a client connected");
-                String dataFromClient = inputStreamReader.readUTF();
-                log.info("Data From Client : " + dataFromClient);
-                String isomsg = unpackRequest(dataFromClient);
-                outToClient.writeBytes(isomsg);
+                if (inputStreamReader.available() > 0) {
+                    int length = inputStreamReader.available();
+                    byte[] dataFromClient = new byte[length];
+                    inputStreamReader.readFully(dataFromClient, 0, length);
+                    log.info("Data From Client : " + new String(dataFromClient));
+                    byte[] isomsg = unpackRequest(dataFromClient);
+                    outToClient.write(isomsg);
+                }
             }
         } catch (IOException ioe) {
             log.error("Error while receiving the messages", ioe);
@@ -71,16 +75,13 @@ public class connectionHandler {
         }
     }
 
-    public String unpackRequest(String message) throws ISOException {
+    public byte[] unpackRequest(byte[] message) throws ISOException {
         ISOMsg isoMsg = new ISOMsg();
         isoMsg.setPackager(packager);
-        isoMsg.unpack(message.getBytes());
+        isoMsg.unpack(message);
         isoMsg.setMTI("0210");
         isoMsg.set("39", "00");
-        byte[] msg = isoMsg.pack();
-        String packedMessage = new String(msg).toUpperCase();
-        isoMsg.dump(System.out, "");
-        return packedMessage;
+        return isoMsg.pack();
 
     }
 
