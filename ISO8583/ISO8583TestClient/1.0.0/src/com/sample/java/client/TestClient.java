@@ -1,6 +1,6 @@
 package com.sample.java.client;
 /*
- * Copyright (c) 2017, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ * Copyright (c) 2018, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,37 +24,52 @@ import java.io.InputStreamReader;
 import java.net.Socket;
 
 public class TestClient {
+    private static final String host = "localhost";
+    private static final int port = 5000;
 
     public TestClient() {
+
+        Socket clientSocket = null;
+        BufferedReader inFromServer = null;
+        DataOutputStream outToServer = null;
         Logger log = Logger.getLogger(getClass());
         try {
-            String host = clientConstant.TargetHost;
-            int port = Integer.parseInt(clientConstant.PORT);
             BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
-            Socket clientSocket = new Socket(host, port);
-            DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
-            BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+            clientSocket = new Socket(host, port);
+            outToServer = new DataOutputStream(clientSocket.getOutputStream());
+            inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             if (clientSocket.isConnected()) {
                 log.info("ISO8583 data : ");
                 String input = inFromUser.readLine(); // Read the command line input
                 input = input.toUpperCase();
-                outToServer.write(input.getBytes());
+                outToServer.writeUTF(input + "\n");
                 outToServer.flush();
                 String messageFromServer;
                 while ((messageFromServer = inFromServer.readLine()) != null) {
                     log.info("Response From Server :" + messageFromServer);
                 }
             }
-            outToServer.close();
-            clientSocket.close();
         } catch (IOException ioe) {
             log.info("Error while sending the message:" + ioe);
-        } catch (NumberFormatException e) {
-            log.error("The String does not contain a parsable integer" + e.getMessage(), e);
+        } finally {
+            try {
+                if (clientSocket != null) {
+                    clientSocket.close();
+                }
+                if (inFromServer != null) {
+                    inFromServer.close();
+                }
+                if (outToServer != null) {
+                    outToServer.close();
+                }
+            } catch (IOException e) {
+                log.error("Couldn't close the I/O Streams", e);
+            }
         }
     }
 
     public static void main(String[] args) {
+
         new TestClient();
     }
 }
