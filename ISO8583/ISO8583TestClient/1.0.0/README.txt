@@ -1,4 +1,4 @@
-Product: JavaTestClient :- For the purpose of testing ISO8583 Inbound request and responses with inbound connector version 1.0.0.
+Product: JavaTestClient :- For the purpose of testing ISO8583 Inbound request and responses with Inbound version 1.0.0.
 
 STEPS:
 
