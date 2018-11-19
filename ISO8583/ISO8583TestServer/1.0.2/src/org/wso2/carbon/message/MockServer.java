@@ -1,6 +1,6 @@
 package org.wso2.carbon.message;
 /*
- * Copyright (c) 2017, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ * Copyright (c) 2018, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,31 +22,37 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class mockServer {
-    private Logger log = Logger.getLogger(getClass());
-    private int port;
-    Socket socket = null;
+public class MockServer {
 
-    public void startServer() throws IOException, ISOException {
+    private Logger log = Logger.getLogger(getClass());
+    private static final int port = 5010;
+
+    private void startServer() throws IOException, ISOException {
+
+        ServerSocket serverSocket = null;
         try {
-            port = Integer.parseInt(serverConstant.PORT);
-        } catch (NumberFormatException e) {
-            log.error("The port number does not contain a parsable integer :" + e.getMessage(), e);
-        }
-        ServerSocket serverSocket = new ServerSocket(port);
-        log.info("Server is waiting for client on port " + port);
-        while (!serverSocket.isClosed()) {
-            try {
-                socket = serverSocket.accept();
-            } catch (IOException e) {
-                log.error("Server is not accept the connection on port ", e);
+            serverSocket = new ServerSocket(port);
+            log.info("Server is waiting for client on port " + port);
+            while (!serverSocket.isClosed()) {
+                Socket socket = serverSocket.accept();
+                new ConnectionHandler(socket);
             }
-            new connectionHandler(socket);
+        } catch (IOException e) {
+            log.error("Server is not accept the connection on port ", e);
+        } finally {
+            try {
+                if (serverSocket != null) {
+                    serverSocket.close();
+                }
+            } catch (IOException e) {
+                log.error("Couldn't close the I/O Streams", e);
+            }
         }
     }
 
     public static void main(String[] args) throws IOException, ISOException {
-        mockServer server = new mockServer();
+
+        MockServer server = new MockServer();
         server.startServer();
     }
 }

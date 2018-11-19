@@ -1,14 +1,5 @@
-Product: JavaTestClient :- Testing purpose of ISO8583 Inbound request and responses.
+Product: JavaTestClient :- For the purpose of testing ISO8583 Inbound request and responses.
 
-STEPS:
-
-1. Add log4j-1.2.17.jar as an external jar in java build path.
-
-2. Update the relative path in log4j.properties for the property "log4j.appender.R.File".
-
-3. Run the main class (TestClient.java).
-
-4. Use ISO8583 standard message as input
-	E.g : 0200B220000100100000000000000002000020134500000050000001115221801234890610000914XYRTUI5269TYUI021ABCDEFGHIJ 1234567890
-	
-
+Note:
+For ISO8583 Inbound version 1.0.0, follow the README file located in {ISO8583TestClient/1.0.0}.
+For ISO8583 Inbound version 1.0.1, follow the README file located in {ISO8583TestClient/1.0.1}.

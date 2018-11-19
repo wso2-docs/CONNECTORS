@@ -1,6 +1,6 @@
 package org.wso2.carbon.message;
 /*
- * Copyright (c) 2017, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ * Copyright (c) 2018, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,14 +27,14 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Properties;
 
-public class connectionHandler {
+public class ConnectionHandler {
     private Logger log = Logger.getLogger(getClass());
     private Socket serverSocket;
     private DataOutputStream outToClient;
     private DataInputStream inputStreamReader;
     private GenericPackager packager;
 
-    public connectionHandler(Socket socket) throws IOException, ISOException {
+    public ConnectionHandler(Socket socket) throws IOException, ISOException {
         this.packager = new GenericPackager("iso87ascii.xml");
         this.serverSocket = socket;
         this.inputStreamReader = new DataInputStream(serverSocket.getInputStream());
@@ -42,7 +42,7 @@ public class connectionHandler {
         run();
     }
 
-    public void run() {
+    private void run() {
         try {
             if (serverSocket.isConnected()) {
                 log.info("There is a client connected");
@@ -75,7 +75,7 @@ public class connectionHandler {
         }
     }
 
-    public byte[] unpackRequest(byte[] message) throws ISOException {
+    private byte[] unpackRequest(byte[] message) throws ISOException {
         ISOMsg isoMsg = new ISOMsg();
         isoMsg.setPackager(packager);
         isoMsg.unpack(message);
@@ -85,7 +85,7 @@ public class connectionHandler {
 
     }
 
-    public String process(ISOMsg isomsg) throws Exception {
+    private String process(ISOMsg isomsg) throws Exception {
         log.info("ISO Message MTI is " + isomsg.getMTI());
         String message = "";
         for (int i = 0; i < 128; i++) {
@@ -97,7 +97,7 @@ public class connectionHandler {
         return message;
     }
 
-    public Properties getISO8583Properties() {
+    private Properties getISO8583Properties() {
         Properties prop = new Properties();
         try {
             FileInputStream input = new FileInputStream("iso87asciiProperties.xml");
