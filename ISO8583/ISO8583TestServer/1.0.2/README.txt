@@ -1,6 +1,6 @@
 Product: JavaTestServer :- For the purpose of testing ISO8583 connector request and responses with connector version 1.0.2.
 
-Pre-requisites:
+Prerequisites:
 1. Add the following jars as external jars in the java build path.
     jpos-1.9.0.jar
     log4j-1.2.17.jar
