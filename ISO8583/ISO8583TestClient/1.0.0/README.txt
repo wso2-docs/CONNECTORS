@@ -1,4 +1,4 @@
-Product: JavaTestClient :- Testing purpose of ISO8583 Inbound request and responses with inbound connector version 1.0.0.
+Product: JavaTestClient :- For the purpose of testing ISO8583 Inbound request and responses with inbound connector version 1.0.0.
 
 STEPS:
 
@@ -8,4 +8,4 @@ STEPS:
 
 3. Run the main class (TestClient.java).
 
-4. Use a ISO8583 standard message as input. E.g : 0200B220000100100000000000000002000020134500000050000001115221801234890610000914XYRTUI5269TYUI021ABCDEFGHIJ 1234567890
+4. Use a ISO8583 standard message as input. E.g. : 0200B220000100100000000000000002000020134500000050000001115221801234890610000914XYRTUI5269TYUI021ABCDEFGHIJ 1234567890
